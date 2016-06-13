@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>Задание 1</title>
+    <script type="text/javascript" src="index.js"></script>
+  </head>
+  <body>
+    <h1>Таблица умножения</h1>
+    <button id="showTable">Показать</button>
+    <pre id="result2"></pre>
+    <hr />
+    <script type="text/javascript">
+      window.onerror = function (err) {
+        alert('У вас ошибка в коде: ' + err);
+      };
+
+      function $ (q) {
+        return document.getElementById(q);
+      }
+
+      $('showTable').addEventListener('click', function () {
+        $('result2').innerHTML = generateTable(37, 37);
+      });
+    </script>
+  </body>
+</html>
