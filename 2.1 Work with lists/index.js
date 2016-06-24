@@ -1,9 +1,16 @@
 var list = {};
-list.add = function add(l, v) {};
-list.remove = function remove(l, index) {};
+list.add = function add(l, v) {
+  var tempList = l;
+  while (tempList.next !== null) tempList = tempList.next;
+  tempList.next = {};
+  tempList.next.value = v;
+  tempList.next.next = null;
+};
+list.remove = function remove(l, i) {};
 list.create = function create() {
   return {
     head: 'list',
+    size: 0,
     next: null
   };
 };
